@@ -17,3 +17,9 @@ You can overwrite the default user accout 'jenkins' by specifing --user on the c
 ```
 --user=root
 ```
+
+### Example command line 
+This starts the jenkins container with the user root and with the docker sock.
+```
+docker run --publish=8080:8080 --publish=50000:50000 -v /mnt/docker/jenkins:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -t --user=root --name jenkins sebastianhutter/jenkins:latest
+```
